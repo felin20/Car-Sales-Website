@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+        /* Basic Reset and Body Styling */
+        body {
+            background-color: wheat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        footer{
+            position: relative;
+            left: -370px;
+            top: 100px;
+        }
+
+        /* Centered Container */
+        .center {
+            position: relative;
+            top: 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Headline Styling */
+        .head {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Text and Image Styling */
+        .text1001 {
+            color: red;
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .text1000 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: brown;
+            border: 1px solid firebrick;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            width: calc(100% - 40px);
+        }
+
+        .img1 {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        /* Footer Styling */
+        .footer10 {
+            position: relative;
+            top: 100px;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .center {
+                top: 80px;
+                padding: 15px;
+            }
+
+            .head {
+                font-size: 1.8rem;
+            }
+
+            .text1001 {
+                font-size: 1.8rem;
+            }
+
+            .text1000 {
+                font-size: 1.1rem;
+                padding: 8px;
+            }
+
+            .img1 {
+                max-width: 500px;
+            }
+
+            .footer10 {
+                top: 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .center {
+                top: 60px;
+                padding: 10px;
+            }
+
+            .head {
+                font-size: 1.6rem;
+            }
+
+            .text1001 {
+                font-size: 1.6rem;
+            }
+
+            .text1000 {
+                font-size: 1rem;
+                padding: 6px;
+            }
+
+            .img1 {
+                max-width: 400px;
+            }
+
+            .footer10 {
+                top: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .center {
+                top: 40px;
+                padding: 5px;
+            }
+
+            .head {
+                font-size: 1.4rem;
+            }
+
+            .text1001 {
+                font-size: 1.4rem;
+            }
+
+            .text1000 {
+                font-size: 0.9rem;
+                padding: 4px;
+            }
+
+            .img1 {
+                max-width: 300px;
+            }
+
+            .footer10 {
+                top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% include 'header/head.html' %}
+
+    <div class="center">
+        
+        {% for i in var %}
+            <p class="text1001">{{ i.name }}</p>
+            <img class="img1" src="{{ i.image }}" alt="{{ i.name }}">
+            <p class="text1000">{{ i.price }}</p>
+            <p class="text1000">{{ i.feature1 }}</p>
+            <p class="text1000">{{ i.feature3 }}</p>
+            <p class="text1000">{{ i.feature4 }}</p>
+            <p class="text1000">{{ i.feature5 }}</p>
+            <p class="text1000">{{ i.feature6 }}</p>
+            <p class="text1000">{{ i.feature7 }}</p>
+            <p class="text1000">{{ i.feature8 }}</p>
+            <p class="text1000">{{ i.feature9 }}</p>
+        {% endfor %}
+    </div>
+
+    <footer>
+        {% include 'footer/foot.html' %}
+    </footer>
+    
+</body>
+</html>

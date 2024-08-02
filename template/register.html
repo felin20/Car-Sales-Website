@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+      .imag3,.imag4,.imag5{
+        position: relative;
+        top: 200px;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
+      img {
+        width: 100%;
+        height: 1500px;
+        filter: brightness(100%);
+        position: relative;
+        top: -100px;
+      }
+
+      header {
+        width: 100%;
+        z-index: 150;
+        margin-bottom: -50px;
+        position: relative;
+        top: -1350px;
+      }
+
+      .form120 {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        width: 90%;
+        margin: -50px auto 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        top: -1200px;
+      }
+
+      .form121 {
+        margin-top: 20px;
+      }
+
+      .text1 {
+        font-size: 2rem;
+        color: red;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .label1 {
+        display: block;
+        color: green;
+        margin: 10px 0 5px;
+        font-size: 1rem;
+      }
+
+      .input1 {
+        width: calc(100% - 20px);
+        height: 50px;
+        color: red;
+        border: 2px solid red;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .text4 {
+        width: calc(100% - 20px);
+        height: 50px;
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .text5 {
+        color: grey;
+        text-align: center;
+      }
+
+      footer {
+        width: 100%;
+        padding: 20px;
+        background-color: #f1f1f1;
+        color: black;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .text1 {
+          font-size: 1.5rem;
+        }
+
+        .input1 {
+          height: 40px;
+        }
+
+        .text4 {
+          height: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text1 {
+          font-size: 1.2rem;
+        }
+
+        .input1 {
+          height: 35px;
+        }
+
+        .text4 {
+          height: 35px;
+        }
+      }
+    </style>
+</head>
+<body>
+  <img src="{% static 'img/3.jpg' %}" alt="Cars" />
+  <header>{% include 'header/head.html' %}</header>
+  <form class="form120">
+    <div class="form121">
+      <p class="text1">Sign Up For Free</p>
+      <div class="form122">
+        <label class="label1" for="first-name">First Name</label>
+        <input
+          class="input1"
+          type="text"
+          id="first-name"
+          placeholder="Enter First Name"
+        />
+        <label class="label1" for="last-name">Last Name</label>
+        <input
+          class="input1"
+          type="text"
+          id="last-name"
+          placeholder="Enter Last Name"
+        />
+        <label class="label1" for="username">Username</label>
+        <input
+          class="input1"
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+        />
+        <label class="label1" for="password">Password</label>
+        <input
+          class="input1"
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+        <label class="label1" for="confirm-password">Confirm Password</label>
+        <input
+          class="input1"
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm Password"
+        />
+        <input class="text4" type="submit" value="Sign Up" />
+        <p class="text5">Forgot password?</p>
+      </div>
+    </div>
+  </form>
+  <div style="position: relative;left: -400px;">
+    {% include 'footer/foot.html' %}
+  </div>
+</body>
+</html>

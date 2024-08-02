@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    /* Reset some default margins */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Ensure the body takes up at least the full height of the viewport */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .back {
+      flex: 1;
+      display: flex;
+      align-items: center; /* Center content vertically if needed */
+      justify-content: center; /* Center content horizontally if needed */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: brightness(100%);
+    }
+
+    /* Header and footer styling */
+    header {
+      width: 100%;
+      /* Additional styling for header can be added here */
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      bottom: 0; /* Ensure the footer stays at the bottom of the viewport */
+    }
+
+    /* Custom text styling */
+    .text1 {
+      opacity: 0.5;
+      color: brown;
+      text-align: center;
+      margin-top: 20px; /* Adjusted for better spacing */
+    }
+  </style>
+</head>
+<body>
+  <header>{% include 'header/head.html' %}</header>
+  <div class="back" style="width: 2050px;position: relative;
+  top: -150px;">
+    <img src="{% static 'img/3.jpg' %}" alt="Cars" />
+    {% block content %} {% include 'home.html' %} {% endblock %}
+  </div>
+  <div style="position: relative;left: -500px;top: -5000px;">
+    {% include 'footer/foot.html' %}
+  </div>
+</body>
+</html>

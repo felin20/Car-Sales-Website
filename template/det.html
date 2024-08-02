@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+        /* Basic Reset and Body Styling */
+        body {
+            background-color: magenta;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Centered Container */
+        .center {
+            position: relative;
+            top: 100px; /* Adjust as needed */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Text and Image Styling */
+        .center p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .center img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        /* Footer Styling */
+        .footer10 {
+            position: relative;
+            top: 100px; /* Adjust to align with your content */
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Specific Text Styling */
+        .te1000 {
+            position: relative;
+            left: 250px;
+            color: white;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header/head.html' %}
+
+    <div class="center">
+        <p>{{ de.name }}</p>
+        <img src="{{ de.image }}" alt="{{ de.name }}">
+        <p>{{ de.price }}</p>
+        <p>{{ de.feature1 }}</p>    
+    </div>
+
+    <div class="footer10">
+        {% include 'footer/foot.html' %}
+    </div>
+</body>
+</html>

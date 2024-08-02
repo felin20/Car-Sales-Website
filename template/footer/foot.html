@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      
+    }
+    .foot19 {
+      background-color: lightcyan;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      left: -100px;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%; /* Adjusted width to account for right margin */
+      margin-left: 500px; /* Moves the footer 500px to the right */
+    }
+    .section {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px; /* Ensures that each section has a minimum width */
+    }
+    .section p {
+      margin: 5px 0;
+      color: grey;
+      font-size: small;
+    }
+    .section p.heading {
+      font-weight: 800;
+      font-size: medium;
+    }
+    .section .links p {
+      margin: 5px 0;
+    }
+    .imag10, .imag11, .imag12 {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .imag3, .imag4, .imag5 {
+      width: 120px;
+      height: 50px;
+    }
+    .text99, .text100 {
+      font-weight: 800;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="foot19">
+    <div class="section">
+      <p class="heading">About CarDekho</p>
+      <div class="links">
+        <p>About</p>
+        <p>Careers With Us</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Corporate Policies</p>
+        <p>Investors</p>
+        <p>FAQs</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="heading">Connect With Us</p>
+      <div class="links">
+        <p>Feedback</p>
+        <p>Contact Us</p>
+        <p>Advertise With Us</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="heading">Others</p>
+      <div class="links">
+        <p>Health Insurance</p>
+        <p>Term Insurance</p>
+        <p>Life Insurance</p>
+        <p>Crack-ED</p>
+        <p>Personal Loan</p>
+        <p>TyreDekho</p>
+        <p>BatteryDekho</p>
+        <p>Girnar Vision Fund</p>
+        <p>Emergency</p>
+        <p class="text99">EXPERIENCE CARDEKHO APP</p>
+        <p class="text100">CarDekho Group Ventures</p>
+      </div>
+    </div>
+
+    <div class="section imag10">
+      <img class="imag3" src="{% static 'img/app.png' %}" alt="App Image 1">
+      <img class="imag3" src="{% static 'img/app1.webp' %}" alt="App Image 2">
+    </div>
+    <div class="section imag11">
+      <img class="imag4" src="{% static 'img/app2.svg' %}" alt="App Image 3">
+      <img class="imag4" src="{% static 'img/app3.svg' %}" alt="App Image 4">
+    </div>
+    <div class="section imag12">
+      <img class="imag5" src="{% static 'img/app4.svg' %}" alt="App Image 5">
+      <img class="imag5" src="{% static 'img/app5.svg' %}" alt="App Image 6">
+    </div>
+  </div>
+</body>
+</html>
